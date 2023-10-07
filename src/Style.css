@@ -9,3 +9,15 @@ footer .active {
     color: #C42885 !important;
 }
 
+.frontPageBottomBg{
+    background-image: url('../src/assets/img/frontBottomBaner.png');
+}
+.ServicesPageTopBg{
+    background-image: url('../src/assets/img/servicesPage.jpg');
+}
+.AboutPageTopBg{
+    background-image: url('../src/assets/img/aboutPage.jpg');
+}
+.ContactPageTopBg{
+    background-image: url('../src/assets/img/contactPage.jpg');
+}

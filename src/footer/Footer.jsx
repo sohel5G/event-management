@@ -18,7 +18,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </nav>
-                <nav className='py-5'>
+                <nav className='py-1'>
                     <ul className="grid grid-flow-col gap-4 md:gap-7">
                         <li className="mt-2"> <NavLink className="py-3 lg:py-2 text-lg hover:text-primaryColor text-black font-medium" to={'/'}>Home</NavLink></li>
 

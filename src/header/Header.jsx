@@ -37,8 +37,8 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="lg:navbar-end mt-10 lg:mt-0 w-full lg:w-2/4 justify-center">
-                        <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Login</button>
-                        <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Register</button>
+                        <Link to={'/login'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Login</button></Link>
+                        <Link to={'/register'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Register</button> </Link>
                     </div>
                 </div>
             </header>
