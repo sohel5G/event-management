@@ -1,0 +1,11 @@
+
+.active{
+    background-color: #C42885!important;
+    color: #ffffff!important;
+}
+
+footer .active {
+    background-color: transparent !important;
+    color: #C42885 !important;
+}
+
