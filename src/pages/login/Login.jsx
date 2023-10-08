@@ -1,13 +1,15 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 
 
 const Login = () => {
     return (
-        <div>
+        <>
+            <Helmet><title>Login - Weeding Event Management</title></Helmet>
             <section className="container mx-auto px-8">
                 <div className="max-w-sm mx-auto pb-28 pt-16">
-                    <h1 className="text-4xl font-semibold text-center mt-10">Login</h1>
+                    <h1 data-aos="flip-right" className="text-4xl font-semibold text-center mt-10">Login</h1>
                     <div className="mt-7 flex justify-center">
                         <div className="w-12 h-[2px] bg-primaryColor"></div>
                     </div>
@@ -27,7 +29,7 @@ const Login = () => {
                     <p className="mt-7">Dont’t Have An Account ? <Link className="text-primaryColor font-semibold" to={'/register'}>Register</Link></p>
                 </div>
             </section>
-        </div>
+        </>
     );
 };
 

@@ -3,10 +3,12 @@ import banner from "../../assets/img/banner.jpg";
 import topSection from "../../assets/img/topSection.jpg";
 import { BsArrowRightShort } from 'react-icons/bs';
 import weeding from "../../assets/img/weeding.png"
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
         <>
+            <Helmet><title>Home - Weeding Event Management</title></Helmet>
             <section>
                 <div className="container mx-auto">
                     <img className="w-full" src={banner} alt="Banner Image" />
@@ -15,7 +17,7 @@ const Home = () => {
             <section>
                 <div className="container mx-auto px-8 pt-16 lg:pt-1 pb-12 flex items-center flex-col lg:md:flex-row">
                     <div className="flex-1 flex justify-center">
-                        <div className="max-w-xl">
+                        <div data-aos="fade-up" className="max-w-xl">
                             <h1 className="text-4xl font-medium"> Wedding Dreams Come True </h1>
                             <div className="mt-4 flex">
                                 <div className="w-24 h-[2px] bg-primaryColor"></div>
@@ -24,7 +26,7 @@ const Home = () => {
                             <Link className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-medium py-2 px-5 rounded-lg text-base mr-3 gap-0 items-center inline-flex" to={'/contact'}> <span>Get Free Quote</span> <BsArrowRightShort className="text-3xl"></BsArrowRightShort> </Link>
                         </div>
                     </div>
-                    <div className="flex-1 flex justify-center mt-28">
+                    <div data-aos="fade-up" className="flex-1 flex justify-center mt-28">
                         <div className="border-4 border-primaryColor pb-5">
                             <img className="w-[420px] -mt-5 -ml-5" src={topSection} alt="Welcome image" />
                         </div>
@@ -39,7 +41,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
+
+                    <div data-aos="fade-up" className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
                         <figure><img src={weeding} alt="Weeding" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Dream Weddings Expert Planning</h2>
@@ -52,7 +55,7 @@ const Home = () => {
                     </div>
                     
                     
-                    <div className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
+                    <div data-aos="fade-up" className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
                         <figure><img src={weeding} alt="Weeding" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Dream Weddings Expert Planning</h2>
@@ -65,7 +68,7 @@ const Home = () => {
                     </div>
                     
                     
-                    <div className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
+                    <div data-aos="fade-up" className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
                         <figure><img src={weeding} alt="Weeding" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Dream Weddings Expert Planning</h2>
@@ -78,7 +81,7 @@ const Home = () => {
                     </div>
                     
                     
-                    <div className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
+                    <div data-aos="fade-up" className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
                         <figure><img src={weeding} alt="Weeding" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Dream Weddings Expert Planning</h2>
@@ -91,7 +94,7 @@ const Home = () => {
                     </div>
                     
                     
-                    <div className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
+                    <div data-aos="fade-up" className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
                         <figure><img src={weeding} alt="Weeding" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Dream Weddings Expert Planning</h2>
@@ -104,7 +107,7 @@ const Home = () => {
                     </div>
                     
                     
-                    <div className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
+                    <div data-aos="fade-up" className="card card-compact bg-base-100 shadow-sm hover:shadow-md border pb-2">
                         <figure><img src={weeding} alt="Weeding" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">Dream Weddings Expert Planning</h2>
@@ -124,7 +127,7 @@ const Home = () => {
                 <div className="frontPageBottomBg bg-center bg-no-repeat bg-cover">
                     <div className=" py-32 bg-[#0000008c]">
                         <div className=" container mx-auto px-8 flex-1 flex justify-center max-w-2xl">
-                            <div className="text-center">
+                            <div data-aos="flip-right" className="text-center">
                                 <h1 className="text-4xl font-medium text-white">We Provide the Best Service in Industry</h1>
                                 <div className="mt-4 flex justify-center">
                                     <div className="w-16 h-[2px] bg-primaryColor"></div>

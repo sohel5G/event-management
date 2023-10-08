@@ -1,13 +1,15 @@
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
     return (
         <>
+            <Helmet><title>About - Weeding Event Management</title></Helmet>
             <section>
                 <div className="ServicesPageTopBg bg-center bg-no-repeat bg-cover">
                     <div className=" py-32 bg-[#0000008c]">
                         <div className=" container mx-auto px-8 flex-1 flex justify-center max-w-2xl">
                             <div className="text-center">
-                                <h1 className="text-4xl font-medium text-white"> About Us </h1>
+                                <h1 data-aos="flip-right" className="text-4xl font-medium text-white"> About Us </h1>
                                 <div className="mt-4 flex justify-center">
                                     <div className="w-16 h-[2px] bg-primaryColor"></div>
                                 </div>
@@ -22,10 +24,10 @@ const About = () => {
 
                     We believe that every love story deserves a magical celebration. We are a passionate team of wedding event planners dedicated to turning your dreams into reality. With years of experience in the industry, we have orchestrated countless love-filled moments, and we are here to make yours just as special.
 
-<br /><br />
+                    <br /><br />
 
                     <strong>Our Mission</strong>
-                    <br /> <br/>
+                    <br /> <br />
                     Our mission is simple: to create weddings that are as unique as the love stories they celebrate. We understand that each couple is different, with their own vision, style, and traditions. Our commitment is to tailor every detail to your preferences, ensuring that your special day reflects your personality and love for one another.
                     <br /><br />
                     <strong> Why Choose Us?</strong>
