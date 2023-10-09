@@ -25,7 +25,7 @@ function TrashIcon() {
 
 const Dashboard = () => {
     return (
-        <div className="container mx-auto px-8 py-52 flex justify-center">
+        <div className="container mx-auto px-8 py-32 flex justify-center">
             <Card className="w-96">
                 <List>
                     <ListItem ripple={false} className="py-1 pr-1 pl-4 flex justify-between items-center">

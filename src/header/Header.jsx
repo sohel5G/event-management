@@ -20,7 +20,7 @@ const Header = () => {
 
     const li = <>
         <li className="mt-2"> <NavLink className="py-3 lg:py-2 text-lg hover:bg-primaryColor hover:text-white text-black font-medium" to={'/'}>Home</NavLink></li>
-        
+
         <li className="mt-2"> <NavLink className="py-3 lg:py-2 text-lg hover:bg-primaryColor hover:text-white text-black font-medium" to={'/about'}>About</NavLink></li>
 
         <li className="mt-2"> <NavLink className="py-3 lg:py-2 text-lg hover:bg-primaryColor hover:text-white text-black font-medium" to={'/services'}>Service</NavLink></li>
@@ -30,9 +30,9 @@ const Header = () => {
     </>
 
     return (
-      <>
+        <>
             <header className="bg-base-200 shadow-md">
-                <div className="navbar container mx-auto px-10 py-7 lg:py-3 grid grid-cols-1 lg:grid-cols-5">
+                <div className="navbar container mx-auto px-10 py-7 lg:py-3 grid grid-cols-1 lg:grid-cols-5 items-center">
                     <div className="justify-center">
                         <div className="dropdown bg-primaryColor hover:bg-hoverPrimaryColor text-white rounded-md mr-5">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,30 +51,31 @@ const Header = () => {
                     </div>
                     <div className="mt-10 lg:mt-0 justify-center flex-col lg:flex-row  col-span-2">
                         {
-                            !user ? <>
-                               <div>
-                                    <Link to={'/login'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Login</button></Link>
-                                    <Link to={'/register'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Register</button> </Link>
-                               </div>
-                            </>:
-                            <>
-                                <div className="flex items-center">
-                                    <Link to={'/dashboard'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Dashboard</button></Link>
-                                    <Link to={'/profile'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Profile</button> </Link>
-                                </div>
-                                <div className="flex gap-2 items-center mt-8 lg:mt-0">
-                                    <img src={user?.photoURL} alt="" className="w-12 h-12 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+                            !user ?
+                                <>
                                     <div>
-                                        <h2 className="text-black font-semibold text-sm"> {user?.displayName} </h2>
-                                        <button onClick={handleLogOut} className="-mt-5 font-semibold pb-[2px] px-[2px] text-sm text-primaryColor border-b border-primaryColor">Log Out</button>
+                                        <Link to={'/login'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Login</button></Link>
+                                        <Link to={'/register'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Register</button> </Link>
                                     </div>
-                                </div>
-                            </>
+                                </> :
+                                <>
+                                    <div className="flex items-center">
+                                        <Link to={'/dashboard'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Dashboard</button></Link>
+                                        <Link to={'/profile'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Profile</button> </Link>
+                                    </div>
+                                    <div className="flex gap-2 items-center mt-8 lg:mt-0">
+                                        <img src={user?.photoURL} alt="" className="w-12 h-12 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+                                        <div>
+                                            <h2 className="text-black font-semibold text-sm"> {user?.displayName} </h2>
+                                            <button onClick={handleLogOut} className="-mt-5 font-semibold pb-[2px] px-[2px] text-sm text-primaryColor border-b border-primaryColor">Log Out</button>
+                                        </div>
+                                    </div>
+                                </>
                         }
                     </div>
                 </div>
             </header>
-      </>
+        </>
     );
 };
 
