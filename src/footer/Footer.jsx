@@ -6,7 +6,7 @@ const Footer = () => {
         <>
             <footer className="footer footer-center p-10 bg-base-200 text-base-content py-24">
                 <nav>
-                    <div data-aos="slide-up" className="grid grid-flow-col gap-4">
+                    <div className="grid grid-flow-col gap-4">
                         <a href="https://facebook.com/sohel5G" target="blank" className="text-primaryColor hover:text-white mr-1 text-xl border-2 border-primaryColor rounded-full p-2 hover:bg-primaryColor"> 
                             <FaFacebookF></FaFacebookF> 
                         </a>
@@ -18,7 +18,7 @@ const Footer = () => {
                         </a>
                     </div>
                 </nav>
-                <nav data-aos="slide-up" className='py-1'>
+                <nav className='py-1'>
                     <ul className="grid grid-flow-col gap-4 md:gap-7">
                         <li className="mt-2"> <NavLink className="py-3 lg:py-2 text-lg hover:text-primaryColor text-black font-medium" to={'/'}>Home</NavLink></li>
 

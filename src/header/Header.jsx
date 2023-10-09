@@ -1,9 +1,13 @@
 // import { NavLink } from "react-router-dom";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo/logo.png"
+import { useContext } from "react";
+import { allContext } from "../allContext/AllContext";
 
 
 const Header = () => {
+
+    const {user} = useContext(allContext);
 
     const li = <>
         <li className="mt-2"> <NavLink className="py-3 lg:py-2 text-lg hover:bg-primaryColor hover:text-white text-black font-medium" to={'/'}>Home</NavLink></li>
@@ -37,8 +41,17 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="lg:navbar-end mt-10 lg:mt-0 w-full lg:w-2/4 justify-center">
-                        <Link to={'/login'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Login</button></Link>
-                        <Link to={'/register'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Register</button> </Link>
+                        {
+                            !user ? <>
+                                <Link to={'/login'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Login</button></Link>
+                                <Link to={'/register'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Register</button> </Link>
+                            </>:
+                            <>
+                                <Link to={'/login'}><button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg mr-3">Dashboard</button></Link>
+                                <Link to={'/profile'}> <button className="bg-primaryColor hover:bg-hoverPrimaryColor text-white font-semibold py-2 px-5 rounded-lg text-lg">Profile</button> </Link>
+                            
+                            </>
+                        }
                     </div>
                 </div>
             </header>

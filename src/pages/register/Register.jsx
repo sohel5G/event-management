@@ -1,7 +1,36 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useContext } from "react";
+import { allContext } from "../../allContext/AllContext";
 
 const Register = () => {
+
+    const { userSignUp, userUpdateOnSignUp } = useContext(allContext);
+
+    const handleUserSignUp = event => {
+        event.preventDefault()
+        const name = event.target.name.value;
+        const phUrl = event.target.phUrl.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+
+        userSignUp(email, password)
+            .then((suessData) => {
+                console.log(suessData.user)
+
+                userUpdateOnSignUp({ displayName: name, photoURL: phUrl })
+                    .then(() => {
+                        console.log('profile data set')
+                    }).catch((error) => {
+                        console.log('profile data not set', error)
+                    });
+                    
+            })
+            .catch((errData) => {
+                console.log(errData.message)
+            });
+    }
+
     return (
         <>
             <Helmet><title>Register - Weeding Event Management</title></Helmet>
@@ -11,22 +40,22 @@ const Register = () => {
                     <div className="mt-7 flex justify-center">
                         <div className="w-12 h-[2px] bg-primaryColor"></div>
                     </div>
-                    <form className="">
+                    <form onSubmit={handleUserSignUp}>
                         <div>
                             <p className="text-xl font-semibold mt-12">Your Name</p>
-                            <input className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="text" placeholder="Enter your name" />
+                            <input name="name" className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="text" placeholder="Enter your name" />
                         </div>
                         <div>
                             <p className="text-xl font-semibold mt-6">Photo URL</p>
-                            <input className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="url" placeholder="Enter photo URL" />
+                            <input name="phUrl" className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="url" placeholder="Enter photo URL" />
                         </div>
                         <div>
                             <p className="text-xl font-semibold mt-6">Email</p>
-                            <input className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="email" placeholder="Enter your email address" />
+                            <input name="email" className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="email" placeholder="Enter your email address" />
                         </div>
                         <div>
                             <p className="text-xl font-semibold mt-6">Password</p>
-                            <input className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="password" placeholder="Enter your password" />
+                            <input name="password" className="text-base bg-[#F3F3F3] py-3 px-5 w-full mt-4" type="password" placeholder="Enter your password" />
                         </div>
                         <div className="mt-10">
                             <input className="bg-primaryColor hover:bg-hoverPrimaryColor py-3 px-7 text-white text-base font-semibold text-center cursor-pointer rounded-md" type="submit" value="Register" />
@@ -38,7 +67,7 @@ const Register = () => {
                     </form>
                     <p className="mt-7">Already Have An Account ? <Link className="text-primaryColor font-semibold" to={'/login'}>Login</Link></p>
                 </div>
-            </section>   
+            </section>
         </>
     );
 };

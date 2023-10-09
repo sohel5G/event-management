@@ -7,6 +7,8 @@ import Contact from "../pages/contact/Contact";
 import ErrorPage from "../pages/errorPage/ErrorPage";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
+import ServiceDetails from "../pages/services/ServiceDetails";
+import Profile from "../pages/profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -31,12 +33,20 @@ const router = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/service/:id',
+                element: <ServiceDetails></ServiceDetails>
+            },
+            {
+                path: '/profile',
+                element: <Profile></Profile>
             }
         ]
     },

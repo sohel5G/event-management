@@ -1,15 +1,50 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useGetServices } from "../hooks/hooks";
 import PropTypes from 'prop-types';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { auth } from "../firebaseConf/FirebaseConf";
 
 export const allContext = createContext(null);
 
 const AllContext = ({children}) => {
-
+    const [user, setUser] = useState(null);
     const services = useGetServices();
+    // const [loading, setLoading] = useState(true);
 
-    const authAndServices = { name: 'Abdullah Al araf', services }
+    const userSignUp = (email, password) => {
+        // setLoading(true)
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+    const userUpdateOnSignUp = (userInfo) => {
+        return updateProfile(auth.currentUser, userInfo)
+    }
+    const userSignIn = (email, password) => {
+        // setLoading(true)
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+    const userLogOut = () => {
+        // setLoading(true)
+        return signOut(auth)
+    }
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, user => {
+            if (user) {
+                return setUser(user);
+                // setLoading(false);
+            }
+            return setUser(null)
+        });
+
+        return () => {
+            unsubscribe();
+        }
+
+    }, []);
+
+   
+
+    const authAndServices = { services, userSignUp, userUpdateOnSignUp, userSignIn, userLogOut, user }
     return (
         <>
             <allContext.Provider value={authAndServices}>
