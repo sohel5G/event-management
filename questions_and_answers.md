@@ -18,7 +18,7 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B ?
+#### Answer: B 
 
 <i>There is a typo in the code. Declared a variable as "greeting" but later tried to access a non-existent variable "greetign," which results in a ReferenceError, indicating that "greetign" is not defined in the scope of the program.</i>
 
@@ -43,7 +43,7 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: C ?
+#### Answer: C 
 
 <i> In JavaScript, when you use the + operator with a string and a number, it performs concatenation instead of addition. In this case, it concatenates the number 1 and the string "2" to produce the string "12." </i>
 
@@ -70,7 +70,7 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: A ?
+#### Answer: A 
 
 <i> The code first assigns the value at food[0] ("🍕") to the favoriteFood property of the info object. Then, it changes the value of info.favoriteFood to "🍝." However, this change does not affect the original food array, so the food array remains unchanged, and its value is ['🍕', '🍫', '🥑', '🍔']. </i>
 
@@ -96,7 +96,7 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: B ?
+#### Answer: B 
 
 <i> In the provided function sayHi(name), it expects an argument name, but when you call sayHi() without providing any arguments, name inside the function becomes undefined. Therefore, the return value will be "Hi there, undefined." </i>
 
@@ -124,9 +124,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i> The forEach method iterates over the nums array and runs the provided function for each element. 0 is considered a falsy value, and all other numbers are truthy. Therefore, the condition if (num) evaluates to true for all numbers except 0. Since there are two non-zero numbers (1 and 2) in the nums array, the count variable is incremented twice, resulting in a value of 2. </i>
 
 </p>
 </details>
