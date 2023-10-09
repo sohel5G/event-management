@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "react-scroll-to-top";
 
 const Contact = () => {
     return (
@@ -52,7 +53,8 @@ const Contact = () => {
                         <button className="bg-primaryColor hover:bg-hoverPrimaryColor py-3 px-7 mt-9 text-white text-base font-semibold text-center cursor-pointer rounded-md">SUBMIT</button>
                     </div>
                 </div>
-            </div>        
+            </div>      
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />  
         </>
     );
 };

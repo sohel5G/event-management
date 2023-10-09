@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { useContext } from "react";
 import { allContext } from "../../allContext/AllContext";
 import swal from 'sweetalert';
+import ScrollToTop from "react-scroll-to-top";
 
 const Register = () => {
 
@@ -86,6 +87,7 @@ const Register = () => {
                     <p className="mt-7">Already Have An Account ? <Link className="text-primaryColor font-semibold" to={'/login'}>Login</Link></p>
                 </div>
             </section>
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </>
     );
 };

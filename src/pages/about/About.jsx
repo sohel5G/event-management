@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import ScrollToTop from "react-scroll-to-top";
 
 const About = () => {
     return (
@@ -51,6 +52,7 @@ const About = () => {
 
                 </p>
             </section>
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </>
     );
 };

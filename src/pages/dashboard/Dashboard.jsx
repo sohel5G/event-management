@@ -5,6 +5,7 @@ import {
     Card,
     IconButton,
 } from "@material-tailwind/react";
+import ScrollToTop from "react-scroll-to-top";
 
 function TrashIcon() {
     return (
@@ -75,6 +76,7 @@ const Dashboard = () => {
                     
                 </List>
             </Card>
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </div>
     );
 };

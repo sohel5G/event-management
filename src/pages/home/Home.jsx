@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import banner from "../../assets/img/banner.jpg";
 import topSection from "../../assets/img/topSection.jpeg";
 import { BsArrowRightShort } from 'react-icons/bs';
 import { Helmet } from "react-helmet-async";
 import { useContext } from "react";
 import { allContext } from "../../allContext/AllContext";
 import Service from "../services/Service";
+import ScrollToTop from "react-scroll-to-top";
 
 const Home = () => {
     const { services } = useContext(allContext)
@@ -14,7 +14,19 @@ const Home = () => {
             <Helmet><title>Home - Weeding Event Management</title></Helmet>
             <section>
                 <div className="container mx-auto">
-                    <img className="w-full" src={banner} alt="Banner Image" />
+                    <div className="frontPageTopBanner bg-center bg-no-repeat bg-cover">
+                        <div className="py-24 md:py-32 lg:py-44 bg-[#0000006d] md:bg-[#0000004d]">
+                            <div className=" container mx-auto px-8 flex-1 flex justify-center max-w-2xl">
+                                <div data-aos="flip-right" className="text-center">
+                                    <h1 className="text-3xl md:text-5xl font-medium text-white">Welcome to our world of wedding magic</h1>
+                                    <div className="mt-7 flex justify-center">
+                                        <div className="w-20 h-[2px] bg-primaryColor"></div>
+                                    </div>
+                                    <p className="text-xl md:text-2xl py-7 text-white"> We specialize in crafting extraordinary moments that will make your special day truly unforgettable. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section>
@@ -79,6 +91,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor:'#C42885',padding:'11px 10px'}} />
         </>
     );
 };

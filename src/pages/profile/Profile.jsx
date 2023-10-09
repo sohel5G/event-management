@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { allContext } from "../../allContext/AllContext";
 import { useNavigate } from "react-router-dom";
-
+import ScrollToTop from "react-scroll-to-top";
 
 const Profile = () => {
     const { userLogOut, user } = useContext(allContext);
@@ -32,6 +32,7 @@ const Profile = () => {
                     </div>
                 </div>
             </section>
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </>
     );
 };

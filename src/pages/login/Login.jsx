@@ -5,6 +5,7 @@ import { allContext } from "../../allContext/AllContext";
 import swal from "sweetalert";
 import { FaGoogle } from 'react-icons/fa';
 import { GoogleAuthProvider } from "firebase/auth";
+import ScrollToTop from "react-scroll-to-top";
 
 const gooleProvider = new GoogleAuthProvider();
 
@@ -68,6 +69,7 @@ const Login = () => {
                     <p className="mt-7">Dont’t Have An Account ? <Link className="text-primaryColor font-semibold" to={'/register'}>Register</Link></p>
                 </div>
             </section>
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </>
     );
 };

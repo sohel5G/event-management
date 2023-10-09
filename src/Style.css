@@ -9,6 +9,9 @@ footer .active {
     color: #C42885 !important;
 }
 
+.frontPageTopBanner{
+    background-image: url('../src/assets/img/banner.jpg');
+}
 .frontPageBottomBg{
     background-image: url('../src/assets/img/frontBottomBaner.png');
 }

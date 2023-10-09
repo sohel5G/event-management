@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { allContext } from "../../allContext/AllContext";
 import RecentEvents from "../sidebarWidget/RecentEvents";
-
+import ScrollToTop from "react-scroll-to-top";
 
 const ServiceDetails = () => {
 
@@ -41,6 +41,7 @@ const ServiceDetails = () => {
                     <RecentEvents></RecentEvents>
                 </div>
             </div>   
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </>
     );
 };

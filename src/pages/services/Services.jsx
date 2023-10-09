@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useContext } from "react";
 import { allContext } from "../../allContext/AllContext";
 import Service from "./Service";
+import ScrollToTop from "react-scroll-to-top";
 
 const Services = () => {
     const { services } = useContext(allContext)
@@ -45,6 +46,7 @@ const Services = () => {
 
                 </div>
             </section>   
+            <ScrollToTop smooth width='20px' height='20px' color='#ffffff' style={{ backgroundColor: '#C42885', padding: '11px 10px' }} />
         </>
     );
 };
