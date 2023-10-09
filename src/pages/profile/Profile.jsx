@@ -13,8 +13,7 @@ const Profile = () => {
                 navigate('/login')
             }).catch(() => {
                 
-            });
-        
+            }); 
     }
     
     return (

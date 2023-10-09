@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { useGetServices } from "../hooks/hooks";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { auth } from "../firebaseConf/FirebaseConf";
 
 export const allContext = createContext(null);
@@ -26,6 +26,9 @@ const AllContext = ({children}) => {
         // setLoading(true)
         return signOut(auth)
     }
+    const userSignInWithPopup = (provider) => {
+        return signInWithPopup(auth, provider)
+    }
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
@@ -45,7 +48,7 @@ const AllContext = ({children}) => {
 
    
 
-    const authAndServices = { services, userSignUp, userUpdateOnSignUp, userSignIn, userLogOut, user, loading, setUser }
+    const authAndServices = { services, userSignUp, userUpdateOnSignUp, userSignIn, userLogOut, user, loading, setUser, userSignInWithPopup }
     return (
         <>
             <allContext.Provider value={authAndServices}>

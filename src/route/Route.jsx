@@ -12,6 +12,8 @@ import Profile from "../pages/profile/Profile";
 import PrivateRouteServiceDetails from "../privateRoute/PrivateRouteServiceDetails";
 import PrivateRouteProfile from "../privateRoute/PrivateRouteProfile";
 import PrivateRouteLoginRegister from "../privateRoute/PrivateRouteLoginRegister";
+import Dashboard from "../pages/dashboard/Dashboard";
+import PrivateRouteDashboard from "../privateRoute/PrivateRouteDashboard";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +52,10 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <PrivateRouteProfile> <Profile></Profile> </PrivateRouteProfile>
+            },
+            {
+                path: 'dashboard',
+                element: <PrivateRouteDashboard><Dashboard></Dashboard></PrivateRouteDashboard>
             }
         ]
     },
