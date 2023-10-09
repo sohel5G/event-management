@@ -1,8 +1,14 @@
-# React + Vite
+# Weeding Event Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Some important  features and functionalities of this website.
 
-Currently, two official plugins are available:
+- Registration feature and validation for user Registration
+- login with Google 
+- Services details is private, need to login to view services details 
+- Website is fully responsive for any screen size device
+- When a user login than can not access login or registration page
+- When a user logout then can not access Dashboard and profile page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Project Live link []()
+
