@@ -20,9 +20,9 @@ console.log(greetign);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
-B: ReferenceError: greetign is not defined
-Because there is a typo in the code. You declared a variable as "greeting" but later tried to access a non-existent variable "greetign," which results in a ReferenceError, indicating that "greetign" is not defined in the scope of the program.
+<i>B: `ReferenceError: greetign is not defined`</i>
+
+`Because there is a typo in the code. You declared a variable as "greeting" but later tried to access a non-existent variable "greetign," which results in a ReferenceError, indicating that "greetign" is not defined in the scope of the program.`
 
 </p>
 </details>
@@ -47,7 +47,9 @@ sum(1, "2");
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>C: `"12"`</i>
+
+`In JavaScript, when you use the + operator with a string and a number, it performs concatenation instead of addition. In this case, it concatenates the number 1 and the string "2" to produce the string "12."`
 
 </p>
 </details>
