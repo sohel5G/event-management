@@ -5,7 +5,7 @@ import { allContext } from "../../allContext/AllContext";
 
 const Register = () => {
 
-    const { userSignUp, userUpdateOnSignUp } = useContext(allContext);
+    const { userSignUp, userUpdateOnSignUp, setUser } = useContext(allContext);
 
     const handleUserSignUp = event => {
         event.preventDefault()
@@ -17,14 +17,15 @@ const Register = () => {
         userSignUp(email, password)
             .then((suessData) => {
                 console.log(suessData.user)
-
+                suessData.user = { displayName: name, photoURL: phUrl }
                 userUpdateOnSignUp({ displayName: name, photoURL: phUrl })
                     .then(() => {
                         console.log('profile data set')
+                        setUser({ displayName: name, photoURL: phUrl, email: email })
                     }).catch((error) => {
                         console.log('profile data not set', error)
                     });
-                    
+
             })
             .catch((errData) => {
                 console.log(errData.message)

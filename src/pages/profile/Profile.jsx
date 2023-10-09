@@ -5,18 +5,18 @@ import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
     const { userLogOut, user } = useContext(allContext);
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const handleLogOut = () => {
         userLogOut()
             .then(() => {
-                navigate("/login");
+                navigate('/login')
             }).catch(() => {
                 
             });
         
     }
-    console.log(user)
+    
     return (
         <>
             <section className="container mx-auto px-8">

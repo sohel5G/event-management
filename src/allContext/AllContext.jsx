@@ -9,7 +9,7 @@ export const allContext = createContext(null);
 const AllContext = ({children}) => {
     const [user, setUser] = useState(null);
     const services = useGetServices();
-    // const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     const userSignUp = (email, password) => {
         // setLoading(true)
@@ -30,10 +30,11 @@ const AllContext = ({children}) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, user => {
             if (user) {
-                return setUser(user);
-                // setLoading(false);
+                setUser(user);
+                return setLoading(false);
             }
-            return setUser(null)
+            setUser(null)
+            return setLoading(false)
         });
 
         return () => {
@@ -44,7 +45,7 @@ const AllContext = ({children}) => {
 
    
 
-    const authAndServices = { services, userSignUp, userUpdateOnSignUp, userSignIn, userLogOut, user }
+    const authAndServices = { services, userSignUp, userUpdateOnSignUp, userSignIn, userLogOut, user, loading, setUser }
     return (
         <>
             <allContext.Provider value={authAndServices}>

@@ -9,6 +9,9 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import ServiceDetails from "../pages/services/ServiceDetails";
 import Profile from "../pages/profile/Profile";
+import PrivateRouteServiceDetails from "../privateRoute/PrivateRouteServiceDetails";
+import PrivateRouteProfile from "../privateRoute/PrivateRouteProfile";
+import PrivateRouteLoginRegister from "../privateRoute/PrivateRouteLoginRegister";
 
 const router = createBrowserRouter([
     {
@@ -34,19 +37,19 @@ const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element: <PrivateRouteLoginRegister> <Login></Login> </PrivateRouteLoginRegister>
             },
             {
                 path: '/register',
-                element: <Register></Register>
+                element: <PrivateRouteLoginRegister> <Register></Register> </PrivateRouteLoginRegister>
             },
             {
                 path: '/service/:id',
-                element: <ServiceDetails></ServiceDetails>
+                element: <PrivateRouteServiceDetails> <ServiceDetails> </ServiceDetails> </PrivateRouteServiceDetails>
             },
             {
                 path: '/profile',
-                element: <Profile></Profile>
+                element: <PrivateRouteProfile> <Profile></Profile> </PrivateRouteProfile>
             }
         ]
     },

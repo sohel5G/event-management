@@ -3,7 +3,7 @@ import { allContext } from "../allContext/AllContext";
 import PropTypes from 'prop-types';
 import { Navigate } from "react-router-dom";
 
-const PrivateRouteProfile = ({ children }) => {
+const PrivateRouteServiceDetails = ({children}) => {
     const { user, loading } = useContext(allContext);
 
     if (loading){
@@ -20,8 +20,8 @@ const PrivateRouteProfile = ({ children }) => {
 
 };
 
-export default PrivateRouteProfile;
-PrivateRouteProfile.propTypes = {
+export default PrivateRouteServiceDetails;
+PrivateRouteServiceDetails.propTypes = {
     children: PropTypes.node
 }
 

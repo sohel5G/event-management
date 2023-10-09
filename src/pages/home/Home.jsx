@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import banner from "../../assets/img/banner.jpg";
-import topSection from "../../assets/img/topSection.jpg";
+import topSection from "../../assets/img/topSection.jpeg";
 import { BsArrowRightShort } from 'react-icons/bs';
 import { Helmet } from "react-helmet-async";
 import { useContext } from "react";
