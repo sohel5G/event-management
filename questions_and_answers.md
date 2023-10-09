@@ -18,11 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B ?
 
-<i>B: `ReferenceError: greetign is not defined`</i>
-
-`Because there is a typo in the code. You declared a variable as "greeting" but later tried to access a non-existent variable "greetign," which results in a ReferenceError, indicating that "greetign" is not defined in the scope of the program.`
+<i>There is a typo in the code. Declared a variable as "greeting" but later tried to access a non-existent variable "greetign," which results in a ReferenceError, indicating that "greetign" is not defined in the scope of the program.</i>
 
 </p>
 </details>
@@ -45,11 +43,10 @@ sum(1, "2");
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C ?
 
-<i>C: `"12"`</i>
+<i> In JavaScript, when you use the + operator with a string and a number, it performs concatenation instead of addition. In this case, it concatenates the number 1 and the string "2" to produce the string "12." </i>
 
-`In JavaScript, when you use the + operator with a string and a number, it performs concatenation instead of addition. In this case, it concatenates the number 1 and the string "2" to produce the string "12."`
 
 </p>
 </details>
@@ -73,9 +70,10 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A ?
 
-<i>Write your explanation here</i>
+<i> The code first assigns the value at food[0] ("🍕") to the favoriteFood property of the info object. Then, it changes the value of info.favoriteFood to "🍝." However, this change does not affect the original food array, so the food array remains unchanged, and its value is ['🍕', '🍫', '🥑', '🍔']. </i>
+
 
 </p>
 </details>
@@ -98,9 +96,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B ?
 
-<i>Write your explanation here</i>
+<i> In the provided function sayHi(name), it expects an argument name, but when you call sayHi() without providing any arguments, name inside the function becomes undefined. Therefore, the return value will be "Hi there, undefined." </i>
 
 </p>
 </details>
