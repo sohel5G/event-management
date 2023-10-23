@@ -10,5 +10,5 @@
 - When a user logout then can not access Dashboard and profile page
 
 
-Project Live link > [https://assignment-nine-b7897.web.app/](https://assignment-nine-b7897.web.app/)
-
+[Project Live link 1](https://assignment-nine-b7897.web.app/)
+[Project Live link 2](https://weeding-event-management.netlify.app/)
