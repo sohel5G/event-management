@@ -32,7 +32,7 @@ const Header = () => {
     return (
         <>
             <header className="bg-base-200 shadow-md">
-                <div className="navbar container mx-auto px-10 py-7 lg:py-3 grid grid-cols-1 lg:grid-cols-5 items-center">
+                <div className="navbar container mx-auto px-10 py-4 lg:py-1 grid grid-cols-1 lg:grid-cols-5 items-center">
                     <div className="justify-center">
                         <div className="dropdown bg-primaryColor hover:bg-hoverPrimaryColor text-white rounded-md mr-5">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const Header = () => {
                                 {li}
                             </ul>
                         </div>
-                        <Link to={'/'}><img className="w-36" src={logo} alt="" /></Link>
+                        <Link to={'/'}><img className="w-24" src={logo} alt="" /></Link>
                     </div>
                     <div className="hidden lg:flex col-span-2 justify-end">
                         <ul className="gap-1 menu menu-horizontal px-1">
